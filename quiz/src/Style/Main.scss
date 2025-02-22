@@ -12,8 +12,11 @@ body {
   height: 100vh;
 }
 
+.result__get {
+  background-color: rgb(62, 161, 67) !important;
+}
 .App {
-  width: 500px;
+  width: clamp(15rem, 10.7746rem + 22.5352vw, 27rem);
   border-radius: 30px;
   padding: 40px;
   background-color: #fff;
@@ -113,6 +116,7 @@ body {
 }
 
 .window {
+  max-width: clamp(16rem, 5.8493rem + 45.0704vw, 40rem);
   width: fit-content;
   display: flex;
   justify-content: start;
@@ -153,3 +157,63 @@ body {
   padding-inline: 15px;
   margin-inline: auto;
 }
+.window__reg-btn {
+  margin-top: 20px;
+  padding: 17px 18px;
+  border: 0;
+  background-color: #6a5be2;
+  color: #fff;
+  font-size: 22px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: disabled 0.2s;
+  &:disabled {
+    background-color: gray;
+    cursor: auto;
+  }
+}
+.progress__counter {
+  font-size: 22px;
+  padding-bottom: 15px;
+}
+// .result__buttons {
+//   display: flex;
+//   gap: 15px;
+// }
+.cert__section {
+  position: relative;
+  max-width: 700px;
+  padding: 25px;
+  border-radius: 40px;
+  background-color: #fff;
+  &::after {
+    position: absolute;
+    content: url("../raect--icon.png");
+    width: 50px;
+    transform: scale(1.8) rotate(50deg);
+
+    right: 50px;
+    bottom: 50px;
+    z-index: 2;
+  }
+}
+.cert__info {
+  position: relative;
+  font-size: 22px;
+  z-index: 3;
+}
+.cert__rated {
+  font-size: 70px;
+  position: absolute;
+  right: 40px;
+  top: 5px;
+  color: red;
+  transform: rotate(-25deg);
+}
+h3 {
+  margin-block: 20px;
+}
+
+// * {
+//   outline: 1px solid greenyellow;
+// }
